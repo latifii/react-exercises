@@ -201,6 +201,7 @@ input.error {
 .color-value {
   color: var(--clr-grey-1);
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 .color-light .color-value {
   color: var(--clr-white);
@@ -211,6 +212,10 @@ input.error {
 
 .alert {
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   margin-top: 0.5rem;
+  background-color: #effff0;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 0 6px;
 }
