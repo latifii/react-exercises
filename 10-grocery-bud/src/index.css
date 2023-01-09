@@ -231,6 +231,17 @@ Grocery List
   content: var(--clr-primary-5);
   transition: var(--transition);
   font-size: 0.85rem;
+  color: var(--clr-grey-2);
+}
+.submit-btn.disabled {
+  cursor: not-allowed;
+  background: var(--clr-grey-8);
+  color: var(--clr-grey-2);
+}
+.submit-btn:hover.disabled {
+  cursor: not-allowed;
+  background: var(--clr-grey-8);
+  color: var(--clr-grey-2);
 }
 .submit-btn:hover {
   background: var(--clr-primary-5);
