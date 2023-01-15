@@ -5,23 +5,27 @@ const url =
   'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png'
 
 const Movies = () => {
-  const { movies, isLoading } = useGlobalContext()
-
-  if (isLoading) {
+  const { loading, data } = useGlobalContext()
+  if (loading) {
     return <div className='loading'></div>
   }
   return (
     <section className='movies'>
-      {movies.map((movie) => {
-        const { imdbID: id, Poster: poster, Title: title, Year: year } = movie
-
+      {data.map((movie) => {
         return (
-          <Link to={`/movies/${id}`} key={id} className='movie'>
+          <Link
+            className='movie'
+            key={movie.imdbID}
+            to={`/movies/${movie.imdbID}`}
+          >
             <article>
-              <img src={poster === 'N/A' ? url : poster} alt={title} />
+              <img
+                src={`${movie.Poster === 'N/A' ? url : movie.Poster}`}
+                alt={movie.Title}
+              />
               <div className='movie-info'>
-                <h4 className='title'>{title}</h4>
-                <p>{year}</p>
+                <h4 className='title'>{movie.Title}</h4>
+                <p>{movie.Year}</p>
               </div>
             </article>
           </Link>

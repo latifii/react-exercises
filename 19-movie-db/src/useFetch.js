@@ -1,33 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}`
 
 const useFetch = (urlParams) => {
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState({ show: false, msg: '' })
+  const [loading, setLoading] = useState(true)
   const [data, setData] = useState(null)
-  const fetchMovies = async (url) => {
-    setIsLoading(true)
+  const [error, setError] = useState({ show: false, msg: '' })
+
+  const movieFetch = async (url) => {
+    setLoading(true)
     try {
-      const response = await fetch(url)
-      const data = await response.json()
-
-      if (data.Response === 'True') {
-        setData(data.Search || data)
-
+      const resp = await fetch(url)
+      const dataApi = await resp.json()
+      if (dataApi.Response === 'True') {
+        setData(dataApi.Search || dataApi)
         setError({ show: false, msg: '' })
       } else {
-        setError({ show: true, msg: data.Error })
+        setError({ show: true, msg: dataApi.Error })
       }
-      setIsLoading(false)
+      setLoading(false)
     } catch (error) {
       console.log(error)
     }
   }
-
   useEffect(() => {
-    fetchMovies(`${API_ENDPOINT}${urlParams}`)
+    movieFetch(`${API_ENDPOINT}${urlParams}`)
   }, [urlParams])
-  return { isLoading, error, data }
+  return { loading, data, error }
 }
 
 export default useFetch

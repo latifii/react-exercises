@@ -1,17 +1,21 @@
 import React from 'react'
 import { useGlobalContext } from './context'
 const SearchForm = () => {
-  const { query, setQuery, error } = useGlobalContext()
+  const { query, error, setQuery } = useGlobalContext()
+  console.log('erorr', error)
+  const searchHandler = (e) => {
+    return setQuery(e.target.value)
+  }
   return (
-    <form className='search-form' onSubmit={(e) => e.preventDefault()}>
+    <form className='search-form'>
       <h2>search movies</h2>
       <input
-        type='text '
+        type='text'
         className='form-input'
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={searchHandler}
       />
-      {error.show && <div className='error'>{error.msg}</div>}
+      {error.show && <p className='error'>{error.msg}</p>}
     </form>
   )
 }
