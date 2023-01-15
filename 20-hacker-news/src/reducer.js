@@ -18,6 +18,35 @@ const reducer = (state, action) => {
         hits: action.payload.hits,
         nbPages: action.payload.nbPages,
       }
+
+    case REMOVE_STORY:
+      return {
+        ...state,
+        hits: state.hits.filter((item) => item.objectID !== action.payload),
+      }
+
+    case HANDLE_SEARCH:
+      return {
+        ...state,
+        query: (state.query = action.payload),
+        page: 0,
+      }
+
+    case HANDLE_PAGE:
+      if (action.payload === 'next') {
+        let nextPage = state.page + 1
+        if (nextPage > state.nbPages - 1) {
+          nextPage = 0
+        }
+        return { ...state, page: nextPage }
+      }
+      if (action.payload === 'prev') {
+        let prevPage = state.page - 1
+        if (prevPage < 0) {
+          prevPage = state.nbPages - 1
+        }
+        return { ...state, page: prevPage }
+      }
     default:
       throw new Error(`no mathching "${action.type}" action type`)
   }

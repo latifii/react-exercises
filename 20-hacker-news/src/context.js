@@ -38,11 +38,28 @@ const AppProvider = ({ children }) => {
     }
   }
 
+  const removeStory = (id) => {
+    dispatch({ type: REMOVE_STORY, payload: id })
+  }
+
+  const handleSearch = (arg) => {
+    dispatch({ type: HANDLE_SEARCH, payload: arg })
+  }
+
+  const handlePage = (arg) => {
+    dispatch({ type: HANDLE_PAGE, payload: arg })
+  }
+
   useEffect(() => {
     fetchNews(`${API_ENDPOINT}query=${state.query}&page=${state.page}`)
-  }, [])
+  }, [state.query, state.page])
+
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider
+      value={{ ...state, removeStory, handleSearch, handlePage }}
+    >
+      {children}
+    </AppContext.Provider>
   )
 }
 // make sure use
