@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 62.5% of 16px browser font size is 10px */
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+input {
+  border: none;
+  border-radius: 7px;
+  background-color: hsl(189deg, 41%, 97%);
+  font-family: 'Space Mono', sans-serif;
+  font-size: 2.4rem;
+  color: hsl(183deg, 100%, 15%);
+  width: 100%;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: hsl(172deg, 67%, 45%) 2px solid;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+::-moz-placeholder {
+  color: hsl(183deg, 100%, 15%);
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+:-ms-input-placeholder {
+  color: hsl(183deg, 100%, 15%);
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+::placeholder {
+  color: hsl(183deg, 100%, 15%);
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+button {
+  border: none;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  width: 15rem;
+  padding: 1rem 0 1rem 0;
+  border-radius: 7px;
+  font-family: 'Space Mono', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: hsl(189deg, 41%, 97%);
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  button {
+    width: 20rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  button {
+    width: 11rem;
+  }
+}
+
+button:hover {
+  background-color: #95eadf;
+  color: hsl(183deg, 100%, 15%);
+}
+
+button:focus {
+  background-color: hsl(172deg, 67%, 45%);
+}
+
+body {
+  font-family: 'Space Mono', sans-serif;
+  font-size: 1.6rem;
+  background-color: hsl(185deg, 41%, 84%);
+  color: hsl(184deg, 14%, 56%);
+}
+main {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    display: grid;
+    place-items: center;
+    grid-template-areas: 'header' 'section' 'footer';
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header .logo {
+  width: 8rem;
+  padding: 5rem 0 4rem 0;
+}
+@media screen and (min-width: 1024px) {
+  header .logo {
+    grid-area: 'header';
+    padding: 0;
+    width: 9rem;
+  }
+}
+
+section {
+  background-color: hsl(0deg, 0%, 100%);
+  max-width: 37.5rem;
+  margin: auto;
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  section {
+    max-width: 70rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section {
+    grid-area: 'section';
+    max-width: 92rem;
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  form {
+    width: 38rem;
+  }
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2%;
+}
+
+.boton1 {
+  grid-row: 1/2;
+}
+.boton2 {
+  grid-row: 2/2;
+}
+.boton1:hover,
+.boton2:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.btn {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.bill-box {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.bill-box > ::-moz-placeholder {
+  text-align: right;
+}
+
+.bill-box > :-ms-input-placeholder {
+  text-align: right;
+}
+
+.bill-box > ::placeholder {
+  text-align: right;
+}
+
+.bill-input {
+  text-align: right;
+}
+
+.dollar-icon {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.select-tip {
+  margin-top: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.button-box {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 4.5rem;
+}
+@media screen and (min-width: 768px) {
+  .button-box {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.button-box > ::-moz-placeholder {
+  text-align: center;
+}
+
+.button-box > :-ms-input-placeholder {
+  text-align: center;
+}
+
+.button-box > ::placeholder {
+  text-align: center;
+}
+
+.tip-custom {
+  width: 15rem;
+  height: 5.6rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .tip-custom {
+    width: 20rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tip-custom {
+    width: 11rem;
+  }
+}
+
+.people-box {
+  position: relative;
+  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-areas: 'label error' 'input input';
+}
+.people-box .label {
+  grid-area: 'label';
+}
+.people-box .error {
+  text-align: right;
+  grid-area: 'error';
+  color: orangered;
+}
+.people-box input {
+  text-align: right;
+  grid-area: 2/1 / span 1 / span 2;
+}
+@media screen and (min-width: 1024px) {
+  .people-box {
+    margin-bottom: 0;
+  }
+}
+
+.people-box > input.invalid {
+  border: none;
+  outline: 2px solid orangered;
+}
+
+.person-icon {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+}
+
+.calculator {
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 20px;
+  padding: 4.5rem 2.5rem 2.3rem 2.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .calculator {
+    width: 41rem;
+  }
+}
+
+.calculator > .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator > .bottom {
+  margin-bottom: 3rem;
+}
+
+.label > p {
+  color: hsl(189deg, 41%, 97%);
+}
+.label > p:nth-child(2) {
+  color: hsl(184deg, 14%, 56%);
+  font-size: 1.3rem;
+}
+
+.result {
+  font-size: 3.25rem;
+  color: hsl(172deg, 67%, 45%);
+}
+
+.reset-button {
+  background-color: hsl(172deg, 67%, 45%);
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: hsl(183deg, 100%, 15%);
+}
+.reset-button:focus {
+  background-color: #007980;
+}
+.reset-button:hover {
+  background-color: #95eadf;
+}
+
+.second-bottom {
+  margin-bottom: 3.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .second-bottom {
+    margin-bottom: 13rem;
+  }
+}
+
+footer {
+  bottom: 0;
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: center;
+}
+footer a {
+  color: hsl(183deg, 100%, 15%);
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    grid-area: 'footer';
+    font-size: 1.2rem;
+  }
+}
