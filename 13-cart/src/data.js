@@ -1,10 +1,11 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {
     id: 1,
     title: 'Samsung Galaxy S7',
     price: 599.99,
     img: 'https://dl.airtable.com/.attachments/91ee456448cef47deec553a2ea3fa8ad/b08bec68/phone-2_ohtt5s.png',
-    amount: 1,
+    amount: 4,
   },
   {
     id: 2,
@@ -20,4 +21,4 @@ export default [
     img: 'https://dl.airtable.com/.attachments/bae9208dc34f35128749ecda5b999e84/337c285d/phone-3_h2s6fo.png',
     amount: 1,
   },
-];
+]
