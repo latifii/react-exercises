@@ -1,22 +1,28 @@
 import React from 'react'
+import { Route, Routes } from 'react-router'
+import { BrowserRouter } from 'react-router-dom'
+import AdminLayout from './layouts/admin-layout'
+import SimpleLayout from './layouts/simple-layout'
+import Home from './pages/home'
+import Login from './pages/login'
+import Products from './pages/products'
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<AdminLayout />}>
+            <Route index element={<Home />} />
+            <Route path='products' element={<Products />} />
+          </Route>
+
+          <Route element={<SimpleLayout />}>
+            <Route path='login' element={<Login />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
