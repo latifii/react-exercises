@@ -8,9 +8,9 @@ Table of Contents
 
 -   [Introduction](#introduction)
 -   [Getting Started](#getting-started)
--   [Exercises](#exercises)
 -   [Contributing](#contributing)
--   [License](#license)
+-   [Exercises](#exercises)
+
 
 Introduction
 ------------
@@ -33,34 +33,26 @@ Before starting, make sure you have the following installed on your machine:
 
 1.  Clone this repository:
 
-    bash
-
-    Copy code
+     ```bash
 
     `git clone https://github.com/latifii/react-exercises.git
     cd react-exercises`
 
 1.  Navigate to the folder of the exercise you'd like to work on:
 
-    bash
-
-    Copy code
+    ```bash
 
     `cd Exercise1`
 
 2.  Install the dependencies for that specific exercise:
 
-    bash
-
-    Copy code
+    ```bash
 
     `npm install`
 
 3.  Start the development server for that exercise:
 
-    bash
-
-    Copy code
+    ```bash
 
     `npm start`
 
@@ -70,6 +62,18 @@ This will start the React app for the chosen exercise. Open http://localhost:300
 
 -   You will need to repeat the above steps for each individual exercise.
 -   Each exercise runs independently, so changes in one exercise won't affect others.
+
+
+Contributing
+------------
+
+If you'd like to contribute to this project by adding new exercises or improving the existing ones, follow these steps:
+
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature-new-exercise`).
+3.  Make your changes and commit them (`git commit -m 'Add new exercise'`).
+4.  Push the branch (`git push origin feature-new-exercise`).
+5.  Open a pull request.
 
 Exercises
 ---------
@@ -87,9 +91,7 @@ Each exercise has its own `README.md` file with specific instructions and goals 
 
 ### Example Exercise Structure:
 
-bash
-
-Copy code
+ ```bash
 
 `react-exercises/
 │
@@ -107,25 +109,3 @@ Copy code
     ├── src/
     ├── package.json
     └── README.md`
-
-Contributing
-------------
-
-If you'd like to contribute to this project by adding new exercises or improving the existing ones, follow these steps:
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature-new-exercise`).
-3.  Make your changes and commit them (`git commit -m 'Add new exercise'`).
-4.  Push the branch (`git push origin feature-new-exercise`).
-5.  Open a pull request.
-
-License
--------
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-csharp
-
-Copy code
-
- `You can now copy this text into your `README.md` file on GitHub!`
