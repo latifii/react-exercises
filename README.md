@@ -35,26 +35,26 @@ Before starting, make sure you have the following installed on your machine:
 
      ```bash
 
-    `git clone https://github.com/latifii/react-exercises.git
-    cd react-exercises`
+    git clone https://github.com/latifii/react-exercises.git
+    cd react-exercises
 
 1.  Navigate to the folder of the exercise you'd like to work on:
 
     ```bash
 
-    `cd Exercise1`
+    cd Exercise1
 
 2.  Install the dependencies for that specific exercise:
 
     ```bash
 
-    `npm install`
+    npm install
 
 3.  Start the development server for that exercise:
 
     ```bash
 
-    `npm start`
+    npm start
 
 This will start the React app for the chosen exercise. Open http://localhost:3000 to view it in your browser.
 
