@@ -80,12 +80,11 @@ Exercises
 
 The exercises are stored in individual folders, with each folder containing a separate React project. Here's a list of the available exercises:
 
-1.  **Exercise 1**: JSX Basics
-2.  **Exercise 2**: Components and Props
-3.  **Exercise 3**: State and Lifecycle
-4.  **Exercise 4**: Handling Events
-5.  **Exercise 5**: Conditional Rendering
-6.  **Exercise 6**: Lists and Keys
+1.  **Exercise 1**: Birthday Reminder
+2.  **Exercise 2**: Tours
+3.  **Exercise 3**: Reviews
+4.  **Exercise 4**: Accordion
+5.  **Exercise 5**: Menu
 
 Each exercise has its own `README.md` file with specific instructions and goals for that exercise. Make sure to check those files for detailed steps.
 
@@ -95,17 +94,17 @@ Each exercise has its own `README.md` file with specific instructions and goals 
 
 `react-exercises/
 │
-├── Exercise1/
+├── 01-birthday-reminder/
 │   ├── src/
 │   ├── package.json
 │   └── README.md
 │
-├── Exercise2/
+├── 02-tours/
 │   ├── src/
 │   ├── package.json
 │   └── README.md
 │
-└── Exercise3/
+└── 03-reviews/
     ├── src/
     ├── package.json
     └── README.md`
